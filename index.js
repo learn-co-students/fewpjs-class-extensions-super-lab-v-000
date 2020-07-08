@@ -1,12 +1,8 @@
-// Write your classes here
+// initializes an instance with one parameter and assigns it to `species`
 class Tree {
     constructor(species) {
-        this._species = species
-    }
-    // initializes an instance with one parameter and assigns it to `species`
-    get species() {
-        return this._species;
-    }
+        this.species = species
+    }  
     // has a static method `definition` that returns a sentence on trees
     static definition() {
         return "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves."
@@ -17,14 +13,11 @@ class Deciduous extends Tree {
     constructor(species, name) {
         // and uses `super` to set `species`
         super(species);
-        this._name = name;
-    }
-    get name() {
-        return this._name;
+        this.name = name;
     }
     // has a static method `definition` that uses `super.definition` and expands on it
     static definition() {
-        return "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves. Deciduous trees shed their leaves annually.";
+        return `${super.definition()} Deciduous trees shed their leaves annually.`
     }
 }
 // initializes with two parameters, species and name, 
@@ -32,13 +25,10 @@ class Evergreen extends Tree {
     constructor(species, name) {
         // and uses `super` to set `species`
         super(species);
-        this._name = name;
-    }
-    get name() {
-        return this._name;
+        this.name = name;
     }
     // has a static method `definition` that uses `super.definition` and expands on it
     static definition() {
-        return "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves. Evergreens keep their leaves all year round."
+        return `${super.definition()} Evergreens keep their leaves all year round.`
     }
 }
